@@ -54,7 +54,7 @@ from dvclive import Live
 from dvclive.keras import DVCLiveCallback
 
 with Live("plots") as live:
-    history = model.fit(X_train, y_train, epochs=epochs', validation_data=(X_test, y_test), verbose=1, callbacks=[DVCLiveCallback(live=live)])
+    history = model.fit(X_train, y_train, epochs=epochs, validation_data=(X_test, y_test), verbose=1, callbacks=[DVCLiveCallback(live=live)])
 
     # Log additional data after training
     test_loss, test_acc = model.evaluate(X_test, y_test)
