@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   prepare:
-    cmd: C:/Users/CONDA/python.exe src/prepare.py
+    cmd: /home/alena/Рабочий стол/Уник/наука о данных/dvc/dvc/src/prepare.py
     deps:
     - path: src/prepare.py
       hash: md5
@@ -14,7 +14,7 @@ stages:
       size: 5200
       nfiles: 4
   train:
-    cmd: C:/Users/CONDA/python.exe src/train.py data
+    cmd: /home/alena/Рабочий стол/Уник/наука о данных/dvc/dvc/src/train.py data
     deps:
     - path: data
       hash: md5
