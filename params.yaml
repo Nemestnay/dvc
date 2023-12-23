@@ -1,2 +1,2 @@
 train:
-  epochs: 4
+  epochs: 50
