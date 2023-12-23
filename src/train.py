@@ -21,6 +21,7 @@ data_path = sys.argv[1]
 params = yaml.safe_load(open('params.yaml'))['train']
 
 epochs = params['epochs']
+
 X_test_file = os.path.join(data_path, 'X_test.csv')
 X_train_file  = os.path.join(data_path, 'X_train.csv')
 y_test_file = os.path.join(data_path, 'y_test.npy')
@@ -37,7 +38,6 @@ def get_model():
         keras.layers.Dense(1000, activation='relu'),
         keras.layers.Dense(500, activation='relu',),
         keras.layers.Dense(300, activation='relu'),
-        keras.layers.Dense(100, activation='relu'),
         keras.layers.Dropout(0.2),
         keras.layers.Dense(3, activation='softmax')
     ])
@@ -53,8 +53,8 @@ model.compile(optimizer='adam',
 from dvclive import Live
 from dvclive.keras import DVCLiveCallback
 
-with Live("plots") as live:
-    history = model.fit(X_train, y_train, epochs=epochs, validation_data=(X_test, y_test), verbose=1, callbacks=[DVCLiveCallback(live=live)])
+with Live("custom_dir") as live:
+    history = model.fit(X_train, y_train, epochs=30, validation_data=(X_test, y_test), verbose=1, callbacks=[DVCLiveCallback(live=live)])
 
     # Log additional data after training
     test_loss, test_acc = model.evaluate(X_test, y_test)
