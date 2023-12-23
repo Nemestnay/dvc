@@ -35,7 +35,7 @@ y_train = np.load(y_train_file)
 def get_model():
     model = Sequential([
         keras.layers.Input(shape=X_train.shape[1:]),
-        keras.layers.Dense(1000, activation='relu'),
+        keras.layers.Dense(1000, activation='sigmond'),
         keras.layers.Dense(500, activation='relu',),
         keras.layers.Dense(300, activation='relu'),
         keras.layers.Dropout(0.2),
