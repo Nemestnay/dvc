@@ -14,4 +14,4 @@ stages:
     params:
     - train.epochs
 metrics:
-- src/metrics.json
+- plots/metrics.json
