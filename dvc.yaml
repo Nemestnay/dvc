@@ -1,13 +1,13 @@
 stages:
   prepare:
-    cmd: C:/Users/CONDA/python.exe src/prepare.py
+    cmd: /home/alena/Рабочий стол/Уник/наука о данных/dvc/dvc/src/prepare.py
     deps:
     - src/prepare.py
     outs:
     - data
 
   train:
-    cmd: C:/Users/CONDA/python.exe src/train.py data
+    cmd: /home/alena/Рабочий стол/Уник/наука о данных/dvc/dvc/src/train.py data
     deps:
     - data
     - src/train.py
