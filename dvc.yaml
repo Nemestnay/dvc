@@ -2,7 +2,7 @@ stages:
   prepare:
     cmd: /home/alena/Рабочий стол/Уник/наука о данных/dvc/dvc/src/prepare.py
     deps:
-    - prepare.py
+    - src/prepare.py
     outs:
     - data
 
@@ -10,7 +10,7 @@ stages:
     cmd: /home/alena/Рабочий стол/Уник/наука о данных/dvc/dvc/src/train.py data
     deps:
     - data
-    - train.py
+    - src/train.py
     params:
     - train.epochs
 metrics:
