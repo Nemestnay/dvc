@@ -3,7 +3,7 @@ stages:
   prepare:
     cmd: /home/alena/Рабочий стол/Уник/наука о данных/dvc/dvc/src/prepare.py
     deps:
-    - path: prepare.py
+    - path: src/prepare.py
       hash: md5
       md5: b0d6cea9130a7d723076df7d2e4f811c
       size: 822
@@ -21,7 +21,7 @@ stages:
       md5: 937ac76928b4c017106f593b895b0ea7.dir
       size: 5200
       nfiles: 4
-    - path: train.py
+    - path: src/train.py
       hash: md5
       md5: 56d15d52063e9a74a89f59a4dc5de269
       size: 1882
