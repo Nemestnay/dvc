@@ -21,7 +21,6 @@ data_path = sys.argv[1]
 params = yaml.safe_load(open('params.yaml'))['train']
 
 epochs = params['epochs']
-print(epochs)
 X_test_file = os.path.join(data_path, 'X_test.csv')
 X_train_file  = os.path.join(data_path, 'X_train.csv')
 y_test_file = os.path.join(data_path, 'y_test.npy')
